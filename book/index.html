@@ -1,0 +1,483 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>The Young Minds Chess Curriculum | King & Knights Chess Academy</title>
+  <meta name="description" content="A complete 52-lesson chess curriculum for students, parents, instructors, schools, clubs, and community programs.">
+  <link rel="canonical" href="https://kingandknights.com/book/">
+  <meta property="og:type" content="book">
+  <meta property="og:title" content="The Young Minds Chess Curriculum | King &amp; Knights Chess Academy">
+  <meta property="og:description" content="A complete 52-lesson chess curriculum for students, parents, and instructors, from King &amp; Knights Chess Academy.">
+  <meta property="og:url" content="https://kingandknights.com/book/">
+  <meta property="og:image" content="https://kingandknights.com/book/book-cover.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='10' fill='%23203955'/%3E%3Cpath d='M20 51h29v-7H18l2 7Zm2-10h25l-4-9-10-4 7-10-3-7-14 9 5 7-8 14Z' fill='%23ffbf2d'/%3E%3C/svg%3E">
+  <style>
+    :root {
+      --ink: #10253a;
+      --navy: #203955;
+      --navy-deep: #0b1e31;
+      --teal: #21838c;
+      --teal-dark: #17656d;
+      --gold: #ffbf2d;
+      --gold-deep: #d79200;
+      --magenta: #bb2f69;
+      --paper: #fffdf7;
+      --white: #ffffff;
+      --line: #d5dde3;
+      --muted: #526577;
+      --max: 1180px;
+    }
+
+    * { box-sizing: border-box; }
+    html { max-width: 100%; overflow-x: hidden; scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      max-width: 100%;
+      overflow-x: hidden;
+      color: var(--ink);
+      background: var(--paper);
+      font-family: "Atkinson Hyperlegible", Arial, sans-serif;
+      font-size: 18px;
+      line-height: 1.55;
+    }
+    img { max-width: 100%; display: block; }
+    a { color: inherit; }
+    h1, h2, h3, .brand, .eyebrow, .button, .stat-value {
+      font-family: "Manrope", "Segoe UI", sans-serif;
+      letter-spacing: 0;
+    }
+    h1, h2, h3, p { margin-top: 0; }
+    h2 {
+      max-width: 780px;
+      margin-bottom: 1.25rem;
+      font-size: 2.65rem;
+      line-height: 1.08;
+    }
+    h3 { font-size: 1.25rem; line-height: 1.25; }
+    .shell { width: min(var(--max), calc(100% - 48px)); margin: 0 auto; }
+    .skip-link {
+      position: fixed;
+      left: 16px;
+      top: -80px;
+      z-index: 100;
+      padding: 10px 14px;
+      color: var(--navy-deep);
+      background: var(--gold);
+      border-radius: 4px;
+    }
+    .skip-link:focus { top: 12px; }
+
+    .site-header {
+      position: absolute;
+      inset: 0 0 auto;
+      z-index: 10;
+      color: var(--white);
+      border-bottom: 1px solid rgba(255,255,255,.22);
+    }
+    .nav {
+      min-height: 78px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+      font-weight: 800;
+      font-size: 1rem;
+      line-height: 1.1;
+    }
+    .brand img { width: 48px; height: 48px; object-fit: cover; border-radius: 4px; }
+    .brand span small { display: block; font-size: .72rem; color: var(--gold); }
+    .nav-links { display: flex; align-items: center; gap: 26px; font-family: "Manrope", sans-serif; font-size: .9rem; }
+    .nav-links a { text-decoration: none; border-bottom: 2px solid transparent; }
+    .nav-links a:hover, .nav-links a:focus-visible { border-color: var(--gold); }
+
+    .hero {
+      min-height: 90vh;
+      display: flex;
+      align-items: flex-end;
+      position: relative;
+      overflow: hidden;
+      color: var(--white);
+      background: var(--navy-deep) url("book-cover.png") center 78% / cover no-repeat;
+    }
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(7, 25, 43, .82);
+    }
+    .hero-content {
+      position: relative;
+      z-index: 1;
+      width: 100%;
+      padding: 150px 0 70px;
+    }
+    .hero-copy { max-width: 790px; }
+    .eyebrow {
+      margin-bottom: 1rem;
+      color: var(--gold);
+      font-size: .88rem;
+      font-weight: 800;
+      text-transform: uppercase;
+    }
+    h1 {
+      margin-bottom: 1.35rem;
+      font-size: 4.5rem;
+      line-height: 1.02;
+      text-wrap: balance;
+    }
+    .hero-lede {
+      max-width: 690px;
+      margin-bottom: 1.8rem;
+      color: #eef5fa;
+      font-size: 1.35rem;
+      line-height: 1.45;
+    }
+    .actions { display: flex; flex-wrap: wrap; gap: 12px; }
+    .button {
+      display: inline-flex;
+      min-height: 50px;
+      align-items: center;
+      justify-content: center;
+      padding: 12px 20px;
+      border: 2px solid var(--gold);
+      border-radius: 6px;
+      background: var(--gold);
+      color: var(--navy-deep);
+      font-weight: 800;
+      text-decoration: none;
+    }
+    .button:hover, .button:focus-visible { background: #ffd46c; border-color: #ffd46c; }
+    .button.secondary { color: var(--white); background: transparent; border-color: rgba(255,255,255,.72); }
+    .button.secondary:hover, .button.secondary:focus-visible { color: var(--navy-deep); background: var(--white); border-color: var(--white); }
+    .hero-note { margin: 16px 0 0; color: #ccdae5; font-size: .92rem; }
+
+    .stats { color: var(--white); background: var(--teal-dark); }
+    .stat-grid { display: grid; grid-template-columns: repeat(4, 1fr); }
+    .stat { padding: 28px 24px; border-right: 1px solid rgba(255,255,255,.25); }
+    .stat:first-child { padding-left: 0; }
+    .stat:last-child { border-right: 0; }
+    .stat-value { display: block; color: var(--gold); font-size: 1.6rem; font-weight: 800; }
+    .stat-label { display: block; font-size: .95rem; }
+
+    section { padding: 96px 0; }
+    .section-intro { max-width: 730px; color: var(--muted); font-size: 1.12rem; }
+    .kicker { margin-bottom: .65rem; color: var(--teal-dark); font-family: "Manrope", sans-serif; font-size: .84rem; font-weight: 800; text-transform: uppercase; }
+
+    .approach-grid {
+      display: grid;
+      grid-template-columns: 1.05fr .95fr;
+      gap: 70px;
+      align-items: start;
+    }
+    .principles { border-top: 1px solid var(--line); }
+    .principle { display: grid; grid-template-columns: 42px 1fr; gap: 18px; padding: 24px 0; border-bottom: 1px solid var(--line); }
+    .principle b { color: var(--magenta); font-family: "Manrope", sans-serif; font-size: 1.1rem; }
+    .principle h3 { margin-bottom: .35rem; }
+    .principle p { margin-bottom: 0; color: var(--muted); }
+
+    .levels { background: var(--white); }
+    .level-grid { display: grid; grid-template-columns: repeat(4, 1fr); margin-top: 42px; border-top: 4px solid var(--gold); }
+    .level { padding: 26px 24px 8px 0; }
+    .level + .level { padding-left: 24px; border-left: 1px solid var(--line); }
+    .level-number { color: var(--magenta); font-family: "Manrope", sans-serif; font-weight: 800; }
+    .level h3 { margin: .5rem 0 .25rem; }
+    .level-age { color: var(--teal-dark); font-weight: 700; }
+    .level p:last-child { color: var(--muted); }
+
+    .preview-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 42px; }
+    .preview-card, .level, .audience-item, .school-grid > *, .about-grid > * { min-width: 0; }
+    .preview-card { overflow: hidden; background: var(--white); border: 1px solid var(--line); border-radius: 6px; }
+    .preview-card img { width: 100%; aspect-ratio: 4 / 5; object-fit: cover; object-position: top; border-bottom: 1px solid var(--line); }
+    .preview-body { padding: 22px; }
+    .preview-body span { color: var(--magenta); font-family: "Manrope", sans-serif; font-size: .8rem; font-weight: 800; text-transform: uppercase; }
+    .preview-body h3 { margin: .55rem 0 .5rem; }
+    .preview-body p { margin-bottom: 0; color: var(--muted); }
+
+    .audience { color: var(--white); background: var(--navy); }
+    .audience h2 { color: var(--white); }
+    .audience .kicker { color: var(--gold); }
+    .audience-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0; margin-top: 42px; border-top: 1px solid rgba(255,255,255,.25); }
+    .audience-item { padding: 26px 26px 0 0; }
+    .audience-item + .audience-item { padding-left: 26px; border-left: 1px solid rgba(255,255,255,.25); }
+    .audience-item h3 { color: var(--gold); }
+    .audience-item p { color: #dce7ef; }
+
+    .school-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 70px; align-items: center; }
+    .school-points { padding: 0; margin: 24px 0; list-style: none; }
+    .school-points li { position: relative; padding: 12px 0 12px 30px; border-bottom: 1px solid var(--line); }
+    .school-points li::before { content: ""; position: absolute; left: 0; top: 21px; width: 10px; height: 10px; background: var(--gold); border-radius: 50%; }
+    .school-panel { padding: 38px; color: var(--white); background: var(--teal-dark); border-radius: 6px; }
+    .school-panel h3 { font-size: 1.65rem; }
+    .school-panel .button { margin-top: 12px; }
+
+    .about { background: #f0f5f6; }
+    .about-grid { display: grid; grid-template-columns: 260px 1fr; gap: 50px; align-items: center; }
+    .about-mark { width: 100%; border-radius: 6px; border: 1px solid var(--line); }
+    .about-copy p { max-width: 720px; color: var(--muted); }
+
+    .academy-pathways { background: var(--white); }
+    .pathway-grid { display: grid; grid-template-columns: repeat(4, 1fr); margin-top: 38px; border-top: 1px solid var(--line); }
+    .pathway { min-width: 0; padding: 25px 24px 0 0; }
+    .pathway + .pathway { padding-left: 24px; border-left: 1px solid var(--line); }
+    .pathway h3 { margin-bottom: .4rem; }
+    .pathway p { color: var(--muted); }
+    .pathway a { color: var(--teal-dark); font-weight: 700; }
+
+    .faq-list { max-width: 860px; margin-top: 36px; border-top: 1px solid var(--line); }
+    details { border-bottom: 1px solid var(--line); }
+    summary { cursor: pointer; padding: 22px 4px; font-family: "Manrope", sans-serif; font-weight: 800; }
+    details p { padding: 0 4px 22px; margin: 0; color: var(--muted); }
+
+    .final-cta { padding: 82px 0; color: var(--white); background: var(--navy-deep); }
+    .final-cta-inner { display: flex; align-items: center; justify-content: space-between; gap: 40px; }
+    .final-cta h2 { margin-bottom: .65rem; color: var(--white); }
+    .final-cta p { max-width: 680px; margin-bottom: 0; color: #dce7ef; }
+
+    footer { padding: 38px 0; color: #dce7ef; background: #061522; font-size: .9rem; }
+    .footer-grid { display: flex; align-items: flex-start; justify-content: space-between; gap: 28px; }
+    .footer-links { display: flex; flex-wrap: wrap; gap: 18px; }
+    .footer-links a:hover, .footer-links a:focus-visible { color: var(--gold); }
+
+    :focus-visible { outline: 3px solid var(--gold); outline-offset: 3px; }
+
+    @media (max-width: 900px) {
+      h1 { font-size: 3.5rem; }
+      h2 { font-size: 2.2rem; }
+      .nav-links a:not(.button) { display: none; }
+      .stat-grid, .level-grid, .audience-grid, .pathway-grid { grid-template-columns: repeat(2, 1fr); }
+      .stat:nth-child(2) { border-right: 0; }
+      .stat:nth-child(-n+2) { border-bottom: 1px solid rgba(255,255,255,.25); }
+      .stat:nth-child(3) { padding-left: 0; }
+      .level:nth-child(3), .audience-item:nth-child(3) { border-left: 0; padding-left: 0; }
+      .pathway:nth-child(3) { border-left: 0; padding-left: 0; }
+      .level:nth-child(n+3), .audience-item:nth-child(n+3), .pathway:nth-child(n+3) { margin-top: 28px; border-top: 1px solid var(--line); }
+      .approach-grid, .school-grid { grid-template-columns: 1fr; gap: 44px; }
+      .preview-grid { grid-template-columns: 1fr 1fr; }
+      .about-grid { grid-template-columns: 190px 1fr; }
+      .final-cta-inner { align-items: flex-start; flex-direction: column; }
+    }
+
+    @media (max-width: 620px) {
+      body { font-size: 17px; }
+      .shell { width: min(var(--max), calc(100% - 32px)); }
+      .nav { min-height: 68px; }
+      .brand img { width: 40px; height: 40px; }
+      .brand span { font-size: .82rem; }
+      .nav-links .button { min-height: 42px; padding: 9px 12px; font-size: .78rem; }
+      .hero { min-height: 86vh; background-position: 56% 76%; }
+      .hero-content { padding: 120px 0 54px; }
+      h1 { font-size: 2.75rem; }
+      h2 { font-size: 1.9rem; }
+      .hero-lede { font-size: 1.12rem; }
+      .actions { flex-direction: column; align-items: stretch; }
+      .button { width: 100%; }
+      section { padding: 70px 0; }
+      .stat-grid, .level-grid, .preview-grid, .audience-grid, .pathway-grid { grid-template-columns: 1fr; }
+      .stat { padding: 20px 0; border-right: 0; border-bottom: 1px solid rgba(255,255,255,.25); }
+      .stat:last-child { border-bottom: 0; }
+      .level, .level + .level, .level:nth-child(3) { padding: 24px 0; border-left: 0; border-top: 1px solid var(--line); }
+      .level:first-child { border-top: 0; }
+      .audience-item, .audience-item + .audience-item, .audience-item:nth-child(3) { padding: 24px 0 0; border-left: 0; border-top: 1px solid rgba(255,255,255,.25); }
+      .pathway, .pathway + .pathway, .pathway:nth-child(3) { padding: 24px 0 0; margin-top: 0; border-left: 0; border-top: 1px solid var(--line); }
+      .about-grid { grid-template-columns: 1fr; }
+      .about-mark { max-width: 220px; }
+      .footer-grid { flex-direction: column; }
+    }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="shell nav">
+      <a class="brand" href="../index.html" aria-label="King and Knights Chess Academy home">
+        <img src="academy-mark.jpeg" alt="">
+        <span>King &amp; Knights<small>Chess Academy</small></span>
+      </a>
+      <nav class="nav-links" aria-label="Academy navigation">
+        <a href="../services.html">Programs</a>
+        <a href="../schools.html">Schools</a>
+        <a href="../resources.html">Learning resources</a>
+        <a class="button" href="../index.html">Explore academy</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero" aria-labelledby="book-title">
+      <div class="hero-content">
+        <div class="shell">
+          <div class="hero-copy">
+            <p class="eyebrow">King &amp; Knights Chess Academy presents</p>
+            <h1 id="book-title">The Young Minds Chess Curriculum</h1>
+            <p class="hero-lede">A complete instructional guide that helps students, parents, and instructors move from the first square to thoughtful play through 52 carefully sequenced lessons.</p>
+            <div class="actions">
+              <a class="button" href="https://www.amazon.com/dp/B0HLCN6H6H">Buy the paperback</a>
+              <a class="button secondary" href="https://www.amazon.com/dp/B0HLCXMXDH">Get the Kindle edition</a>
+            </div>
+            <p class="hero-note">Instructor edition with student activity pages · By Emmanuel Aluko</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="stats" aria-label="Book highlights">
+      <div class="shell stat-grid">
+        <div class="stat"><span class="stat-value">52</span><span class="stat-label">progressive lessons</span></div>
+        <div class="stat"><span class="stat-value">4</span><span class="stat-label">developmental levels</span></div>
+        <div class="stat"><span class="stat-value">232</span><span class="stat-label">full-color pages</span></div>
+        <div class="stat"><span class="stat-value">Ages 3–11</span><span class="stat-label">approximate learning pathway</span></div>
+      </div>
+    </div>
+
+    <section aria-labelledby="approach-title">
+      <div class="shell approach-grid">
+        <div>
+          <p class="kicker">A developmental approach</p>
+          <h2 id="approach-title">Chess is the learning vehicle. The child is the focus.</h2>
+          <p class="section-intro">Children do more than memorize how pieces move. They learn to notice, choose, explain, take turns, persist, and reflect—habits that grow through guided play and purposeful practice.</p>
+        </div>
+        <div class="principles">
+          <div class="principle"><b>01</b><div><h3>Understand</h3><p>Meet each idea through a clear explanation and a large, readable board.</p></div></div>
+          <div class="principle"><b>02</b><div><h3>Practice</h3><p>Explore the position, answer focused questions, and test the idea in play.</p></div></div>
+          <div class="principle"><b>03</b><div><h3>Reflect</h3><p>Explain the decision, learn from the result, and carry the thinking forward.</p></div></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="levels" aria-labelledby="levels-title">
+      <div class="shell">
+        <p class="kicker">One pathway, flexible entry points</p>
+        <h2 id="levels-title">Four levels that grow with the learner</h2>
+        <p class="section-intro">Age ranges are guides, not placement tests. Learners can begin where their current understanding and confidence fit best.</p>
+        <div class="level-grid">
+          <article class="level"><span class="level-number">Level 1</span><h3>Chess Explorers</h3><p class="level-age">Approx. ages 3–4 · 10 lessons</p><p>Discover the board and pieces through short, supported play.</p></article>
+          <article class="level"><span class="level-number">Level 2</span><h3>Chess Builders</h3><p class="level-age">Approx. ages 4–6 · 12 lessons</p><p>Build secure rules and habits for complete games.</p></article>
+          <article class="level"><span class="level-number">Level 3</span><h3>Chess Thinkers</h3><p class="level-age">Approx. ages 6–8 · 14 lessons</p><p>Recognize patterns, calculate replies, and explain decisions.</p></article>
+          <article class="level"><span class="level-number">Level 4</span><h3>Chess Strategists</h3><p class="level-age">Approx. ages 8–11 · 16 lessons</p><p>Compare candidate moves, form plans, and review games.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="inside" aria-labelledby="inside-title">
+      <div class="shell">
+        <p class="kicker">Inside the curriculum</p>
+        <h2 id="inside-title">From first discoveries to strategic decisions</h2>
+        <p class="section-intro">Every lesson combines an inviting illustrated opening with teaching guidance, hands-on exploration, practice, purposeful play, and evidence of learning.</p>
+        <div class="preview-grid">
+          <article class="preview-card"><img src="lesson-meet-the-board.png" alt="Illustrated opening for the Meet the Board lesson"><div class="preview-body"><span>First steps</span><h3>Meet the Board</h3><p>Learn light and dark squares, corners, and how to orient the board correctly.</p></div></article>
+          <article class="preview-card"><img src="lesson-the-fork.png" alt="Illustrated opening for the chess fork lesson"><div class="preview-body"><span>Tactical thinking</span><h3>The Fork</h3><p>See how one piece can create two threats and learn which threat comes first.</p></div></article>
+          <article class="preview-card"><img src="lesson-opening-plans.png" alt="Illustrated opening for the Opening Plans lesson"><div class="preview-body"><span>Strategic growth</span><h3>Opening Plans</h3><p>Connect useful moves through development, central support, and king safety.</p></div></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="audience" aria-labelledby="audience-title">
+      <div class="shell">
+        <p class="kicker">Made to be used</p>
+        <h2 id="audience-title">A practical guide for every adult helping a child learn</h2>
+        <div class="audience-grid">
+          <article class="audience-item"><h3>Parents</h3><p>Plain-language guidance makes it possible to encourage learning even when the adult is new to chess.</p></article>
+          <article class="audience-item"><h3>Instructors</h3><p>Ready-to-use lesson objectives, board setups, activities, answers, and extensions support confident teaching.</p></article>
+          <article class="audience-item"><h3>Schools</h3><p>A coherent sequence helps enrichment programs move beyond disconnected activities and one-off worksheets.</p></article>
+          <article class="audience-item"><h3>Clubs and communities</h3><p>Flexible entry points support mixed experience levels in libraries, clubs, homeschool groups, and youth programs.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="schools" aria-labelledby="schools-title">
+      <div class="shell school-grid">
+        <div>
+          <p class="kicker">For schools and learning programs</p>
+          <h2 id="schools-title">Bring a shared teaching pathway to every board</h2>
+          <p class="section-intro">Use the curriculum as an instructor guide, a staff-development resource, or the foundation for a complete youth chess program.</p>
+          <ul class="school-points">
+            <li>One structured sequence from beginner movement to planning and game review</li>
+            <li>Reproducible student activity pages for the purchaser’s participating classes</li>
+            <li>Progress records, capstones, and practical evidence of learning</li>
+            <li>Support for school, library, club, homeschool, and community settings</li>
+          </ul>
+        </div>
+        <aside class="school-panel" aria-label="School and group orders">
+          <p class="kicker">Program orders</p>
+          <h3>Planning for several instructors or locations?</h3>
+          <p>Talk with King &amp; Knights Chess Academy about your setting, the number of instructors, and how the curriculum will be used.</p>
+          <a class="button" href="../contact.html">Discuss your program</a>
+        </aside>
+      </div>
+    </section>
+
+    <section class="about" aria-labelledby="about-title">
+      <div class="shell about-grid">
+        <img class="about-mark" src="academy-mark.jpeg" alt="King and Knights Chess Academy gold king and knight mark">
+        <div class="about-copy">
+          <p class="kicker">About the author and academy</p>
+          <h2 id="about-title">Built from real teaching practice</h2>
+          <p>Emmanuel Aluko is the founder of King &amp; Knights Chess Academy in Maryland. The academy helps learners build chess understanding through clear instruction, purposeful practice, and thoughtful reflection—one move at a time.</p>
+          <a href="../about.html">Meet King &amp; Knights Chess Academy</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="academy-pathways" aria-labelledby="pathways-title">
+      <div class="shell">
+        <p class="kicker">Beyond the book</p>
+        <h2 id="pathways-title">Find your place at the academy</h2>
+        <p class="section-intro">The book is one way to learn with King &amp; Knights. Explore live teaching and other resources for learners, families, and educators.</p>
+        <div class="pathway-grid">
+          <div class="pathway"><h3>Private coaching</h3><p>Individual lessons shaped around the learner's pace and goals.</p><a href="../services.html#private">Explore private lessons</a></div>
+          <div class="pathway"><h3>Group classes</h3><p>Learn alongside other players in a supportive online setting.</p><a href="../services.html#groups">Explore group classes</a></div>
+          <div class="pathway"><h3>School programs</h3><p>Bring structured chess enrichment to your school or community.</p><a href="../schools.html">Explore school programs</a></div>
+          <div class="pathway"><h3>Learning resources</h3><p>See the activities and guidance that support learning between lessons.</p><a href="../resources.html">Explore resources</a></div>
+        </div>
+      </div>
+    </section>
+
+    <section aria-labelledby="faq-title">
+      <div class="shell">
+        <p class="kicker">Good questions</p>
+        <h2 id="faq-title">Before you choose the book</h2>
+        <div class="faq-list">
+          <details><summary>Does the learner need to know chess already?</summary><p>No. The curriculum begins with the board and pieces, then develops rules, tactics, planning, and reflection step by step.</p></details>
+          <details><summary>Can a parent use it without being an experienced chess player?</summary><p>Yes. Explanations, answers, setups, and teaching notes are written to help adults guide learning clearly. A real board and pieces are recommended for practice.</p></details>
+          <details><summary>Is this only for classroom instructors?</summary><p>No. It is designed for instructors, parents, schools, chess clubs, homeschool groups, libraries, and community programs.</p></details>
+          <details><summary>What is the difference between paperback and Kindle?</summary><p>The paperback is the full-color instructor edition with physical activity pages. The Kindle edition offers the same curriculum in a reflowable digital format for compatible devices and apps.</p></details>
+          <details><summary>May activity pages be copied for a class?</summary><p>The original purchaser may reproduce the specifically designated activity pages for students directly participating in that purchaser’s classes at one physical location. The full license appears inside the book.</p></details>
+        </div>
+      </div>
+    </section>
+
+    <section class="final-cta" aria-labelledby="final-title">
+      <div class="shell final-cta-inner">
+        <div>
+          <p class="kicker">Every great move begins with curiosity</p>
+          <h2 id="final-title">Give young learners a clear path into chess.</h2>
+          <p>Choose the full-color paperback for hands-on teaching or the Kindle edition for digital access.</p>
+        </div>
+        <div class="actions">
+          <a class="button" href="https://www.amazon.com/dp/B0HLCN6H6H">Buy the paperback</a>
+          <a class="button secondary" href="https://www.amazon.com/dp/B0HLCXMXDH">Get Kindle</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="shell footer-grid">
+      <div><strong>King &amp; Knights Chess Academy</strong><br>Maryland · Online learning worldwide<br>info@kingandknights.com · (240) 449-4344</div>
+      <div class="footer-links"><a href="../index.html">Academy home</a><a href="../services.html">Programs</a><a href="../schools.html">Schools</a><a href="../resources.html">Resources</a><a href="../contact.html">Contact</a></div>
+    </div>
+  </footer>
+</body>
+</html>

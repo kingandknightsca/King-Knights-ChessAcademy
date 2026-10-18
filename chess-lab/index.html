@@ -7,8 +7,9 @@
     <meta name="description" content="Play chess and explore curriculum-connected practice with King & Knights Chess Academy." />
     <title>Chess Lab | King & Knights Chess Academy</title>
     <link rel="icon" href="./academy-logo.jpg" />
-    <script type="module" crossorigin src="./assets/index-BxyOfWWV.js"></script>
-    <link rel="stylesheet" crossorigin href="./assets/index-7PYf3Nms.css">
+    <script type="module" crossorigin src="./assets/main-DFhTt_je.js"></script>
+    <link rel="modulepreload" crossorigin href="./assets/game-clock-BQnUNaX9.js">
+    <link rel="stylesheet" crossorigin href="./assets/game-clock-DZO6A3uF.css">
   </head>
   <body>
     <a class="skip" href="#main">Skip to chess lab</a>
@@ -43,14 +44,17 @@
       <section class="workspace" id="panel-play" role="tabpanel" aria-labelledby="tab-play">
         <div class="board-column">
           <div class="board-heading"><span id="opponent-label">Computer <small>Black pieces</small></span><span class="board-heading-actions"><span id="game-state">Your move</span><button type="button" class="board-flip" data-flip-board title="Flip board" aria-label="Flip board"><i data-lucide="rotate-cw"></i></button></span></div>
+          <div class="clock-row" id="top-clock-row" hidden><span id="top-clock-side">Black</span><output id="top-clock" aria-label="Top player remaining time">5:00</output></div>
           <div class="board-shell"><div id="play-board" class="chess-board" aria-label="Chess board"></div></div>
+          <div class="clock-row" id="bottom-clock-row" hidden><span id="bottom-clock-side">White</span><output id="bottom-clock" aria-label="Bottom player remaining time">5:00</output></div>
           <div class="board-footer"><span id="player-label">You <small>White pieces</small></span><span id="play-board-instruction">Click a piece, then its destination.</span></div>
         </div>
         <aside class="side-panel">
           <div class="panel-top"><p class="kicker">Free play</p><h2 id="play-heading">Play the computer</h2><p id="play-description">Try ideas at your own pace. A game is practice, not a placement test.</p></div>
-          <div class="control-group"><span class="control-label">Play mode</span><div class="segmented mode-selector" role="group" aria-label="Play mode"><button type="button" class="active" data-mode="computer" aria-pressed="true">Computer</button><button type="button" data-mode="local" aria-pressed="false">Two players here</button></div></div>
+          <div class="control-group"><span class="control-label">Play mode</span><div class="segmented mode-selector" role="group" aria-label="Play mode"><button type="button" class="active" data-mode="computer" aria-pressed="true">Computer</button><button type="button" data-mode="local" aria-pressed="false">Two players here</button></div><a class="online-play-link" href="./online-play.html">Play another visitor online <span aria-hidden="true">&#8599;</span></a></div>
           <div class="control-group" id="side-control"><span class="control-label">Play as</span><div class="segmented side-selector" role="group" aria-label="Your chess pieces"><button type="button" class="active" data-side="w" aria-pressed="true">White</button><button type="button" data-side="b" aria-pressed="false">Black</button></div></div>
           <div class="control-group" id="challenge-control"><span class="control-label">Challenge</span><div class="segmented" role="group" aria-label="Computer challenge"><button type="button" class="active" data-level="easy" aria-pressed="true">Gentle</button><button type="button" data-level="medium" aria-pressed="false">Steady</button><button type="button" data-level="hard" aria-pressed="false">Stretch</button></div></div>
+          <div class="control-group"><label class="control-label" for="time-control">Clock</label><select id="time-control" aria-label="Chess clock"><option value="none">No clock</option><option value="rapid5">5 minutes</option><option value="rapid10">10 minutes</option><option value="rapid15">15 minutes + 10 seconds</option></select></div>
           <div class="toolbar play-toolbar"><button type="button" id="new-game" class="command primary"><i data-lucide="rotate-ccw"></i> New game</button><button type="button" id="undo-move" class="icon-command" aria-label="Undo last turn" title="Undo last turn"><i data-lucide="undo-2"></i></button><button type="button" id="review-toggle" class="command secondary" aria-pressed="false" disabled><i data-lucide="history"></i><span id="review-toggle-label">Review game</span></button></div>
           <div id="review-controls" class="review-controls" hidden><span id="review-position">Start position</span><div class="review-buttons" role="group" aria-label="Review moves"><button type="button" id="review-first" class="icon-command" aria-label="First position" title="First position"><i data-lucide="skip-back"></i></button><button type="button" id="review-prev" class="icon-command" aria-label="Previous move" title="Previous move"><i data-lucide="chevron-left"></i></button><button type="button" id="review-next" class="icon-command" aria-label="Next move" title="Next move"><i data-lucide="chevron-right"></i></button><button type="button" id="review-last" class="icon-command" aria-label="Last move" title="Last move"><i data-lucide="skip-forward"></i></button></div></div>
           <div class="move-section"><div class="section-line"><h3>Moves</h3><span id="move-count">0 played</span></div><div id="moves" class="moves" aria-live="polite"><p class="empty">Your game starts here.</p></div></div>

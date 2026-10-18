@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#18352f" />
+    <title>Play Another Visitor | King & Knights Chess Academy</title>
+    <link rel="icon" href="./academy-logo.jpg" />
+    <script type="module" crossorigin src="./assets/online-BuJzWIil.js"></script>
+    <link rel="modulepreload" crossorigin href="./assets/game-clock-BQnUNaX9.js">
+    <link rel="stylesheet" crossorigin href="./assets/game-clock-DZO6A3uF.css">
+    <link rel="stylesheet" crossorigin href="./assets/online-CgOA_T_6.css">
+  </head>
+  <body>
+    <a class="skip" href="#main">Skip to online play</a>
+    <header class="topbar"><a class="brand" href="https://kingandknights.com/"><img src="./academy-logo.jpg" alt="" width="48" height="48" /><span>King & Knights <small>CHESS ACADEMY</small></span></a><nav><a href="./">Chess Lab</a><a href="https://kingandknights.com/services.html">Programs</a></nav></header>
+    <main id="main">
+      <div class="intro online-intro"><div><p class="kicker">Free visitor chess</p><h1>Play another visitor.</h1><p>Choose an open challenge or start one of your own.</p></div><a href="./" class="command secondary">Back to Chess Lab</a></div>
+      <p id="connection-status" class="connection-status" role="status">Connecting to the lobby...</p>
+      <section id="lobby" class="online-layout" aria-label="Open challenges">
+        <div><div class="section-line"><h2>Open challenges</h2><span id="lobby-count"></span></div><div id="challenge-list" class="challenge-list" aria-live="polite"></div></div>
+        <aside class="online-create"><h2>Start a challenge</h2><label for="online-control">Clock</label><select id="online-control"><option value="5+0">5 minutes</option><option value="10+0">10 minutes</option><option value="15+10">15 minutes + 10 seconds</option></select><button type="button" id="create-challenge" class="command primary">Post open challenge</button><p class="online-boundary">No names or chat. Matches are with other visitors, not a supervised Academy class.</p></aside>
+      </section>
+      <section id="match" class="online-layout" aria-label="Visitor match" hidden>
+        <div class="board-column"><div class="board-heading"><span id="online-opponent">Opponent</span><span class="board-heading-actions"><span id="online-game-state">Waiting</span><button type="button" id="online-flip" class="board-flip" title="Flip board" aria-label="Flip board">&#8635;</button></span></div><div class="clock-row" id="online-top-row"><span id="online-top-side">Black</span><output id="online-top-clock">5:00</output></div><div class="board-shell"><div id="online-board" class="chess-board" aria-label="Online chess board"></div></div><div class="clock-row" id="online-bottom-row"><span id="online-bottom-side">White</span><output id="online-bottom-clock">5:00</output></div><div class="board-footer"><span id="online-you">You</span><span>Choose a piece, then a square.</span></div></div>
+        <aside class="online-match-side"><h2 id="match-title">Your challenge</h2><p id="match-detail" role="status"></p><div id="pending-actions" class="toolbar" hidden><button type="button" id="accept-request" class="command primary">Accept request</button><button type="button" id="decline-request" class="command secondary">Decline</button></div><div id="waiting-actions" class="toolbar" hidden><button type="button" id="cancel-challenge" class="command secondary">Cancel challenge</button></div><div id="playing-actions" class="toolbar" hidden><button type="button" id="resign-game" class="command secondary">Resign</button></div><div class="move-section"><div class="section-line"><h3>Moves</h3></div><div id="online-moves" class="moves" aria-live="polite"></div></div></aside>
+      </section>
+      <p id="online-error" class="online-error" role="alert" hidden></p>
+    </main>
+    <dialog id="online-promotion" class="promotion-dialog"><h2>Promote your pawn</h2><div class="promotion-options"><button type="button" data-promote="q">Queen</button><button type="button" data-promote="r">Rook</button><button type="button" data-promote="b">Bishop</button><button type="button" data-promote="n">Knight</button></div><button type="button" id="online-promotion-cancel" class="command secondary">Cancel</button></dialog>
+  </body>
+</html>
